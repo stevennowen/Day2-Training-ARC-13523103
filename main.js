@@ -2,13 +2,13 @@ document.getElementById('load-btn').addEventListener('click', function() {
     fetch('https://dummyjson.com/products')
       .then(response => response.json())
       .then(data => {
-        // Ambil 10 produk pertama
+        
         const products = data.products.slice(0, 10);
         const container = document.getElementById('product-container');
-        container.innerHTML = ''; // Bersihkan kontainer sebelum menampilkan data baru
+        container.innerHTML = ''; 
   
         products.forEach(product => {
-          // Membuat elemen untuk tiap produk
+
           const productDiv = document.createElement('div');
           productDiv.className = 'product';
           productDiv.innerHTML = `
